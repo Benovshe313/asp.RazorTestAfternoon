@@ -1,0 +1,27 @@
+﻿@page
+@model RazorTestAfternoon.Pages.Product.EditModel
+@{
+}
+
+<h2>Edit Product</h2>
+
+@if (Model.Product != null)
+{
+    <form method="post">
+        <input type="hidden" asp-for="Product.Id" />
+
+        <div>
+            <label>Product Name</label>
+            <input asp-for="Product.Name" />
+        </div>
+        <br />
+        <div>
+            <label>Product Price</label>
+            <input asp-for="Product.Price" />
+        </div>
+
+        <div>
+            <button type="submit" class="btn btn-success">Save</button>
+        </div>
+    </form>
+}
